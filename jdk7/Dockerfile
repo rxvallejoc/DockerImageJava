@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 MAINTAINER Rodrigo Vallejo <rxvallejoc@gmail.com>
 
 ENV LANG C.UTF-8
@@ -14,7 +14,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk
 ENV PATH $PATH:$JAVA_HOME/bin
 
 ENV JAVA_VERSION 7u91
-ENV JAVA_ALPINE_VERSION 7.91.2.6.3-r1
+ENV JAVA_ALPINE_VERSION 7.91.2.6.3-r2
 
 RUN set -x \
 	&& apk add --no-cache \
