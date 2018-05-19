@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.7
 MAINTAINER Rodrigo Vallejo <rxvallejoc@gmail.com>
 
 ENV LANG C.UTF-8
@@ -10,11 +10,12 @@ RUN { \
 		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; \
 	} > /usr/local/bin/docker-java-home \
 	&& chmod +x /usr/local/bin/docker-java-home
+
 ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk
 ENV PATH $PATH:$JAVA_HOME/bin
 
-ENV JAVA_VERSION 7u91
-ENV JAVA_ALPINE_VERSION 7.91.2.6.3-r2
+ENV JAVA_VERSION 7u151
+ENV JAVA_ALPINE_VERSION 7.151.2.6.11-r0
 
 RUN set -x \
 	&& apk add --no-cache \
